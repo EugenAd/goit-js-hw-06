@@ -27,7 +27,9 @@ createButton.addEventListener("click", () => {
   boxes.forEach((box) => {
     document.querySelector("#boxes").appendChild(box);
   });
-  document.querySelector("#boxes").innerHTML = "";
+  document
+    .querySelector("#boxes")
+    .insertAdjacentElement("afterbegin", ...boxes);
 });
 const destroyButton = document.querySelector("[data-destroy]");
 destroyButton.addEventListener("click", () => {
